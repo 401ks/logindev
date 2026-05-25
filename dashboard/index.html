@@ -467,33 +467,30 @@
 </div>
 
 <!-- AI Chat Side Pane -->
+<!-- AI Chat Side Pane (Modified to embed supportbot.naijaassets.com) -->
 <div id="aiChatPane" class="fixed top-0 right-0 h-full w-96 bg-surface-container-lowest border-l border-outline-variant shadow-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col">
-    <div class="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+    <div class="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest flex-shrink-0">
         <div class="flex items-center gap-2">
             <i class="fa-solid fa-robot text-secondary text-lg"></i>
             <h3 class="font-label-md text-primary font-bold">AI Support</h3>
         </div>
-        <button id="closeAiChat" class="p-2 hover:bg-surface-container rounded-full transition-colors"><i class="fa-solid fa-times"></i></button>
+        <button id="closeAiChat" class="p-2 hover:bg-surface-container rounded-full transition-colors">
+            <i class="fa-solid fa-times"></i>
+        </button>
     </div>
-    <div class="flex-1 p-6 flex flex-col items-center justify-center text-center space-y-4 bg-surface/50">
-        <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center">
-            <i class="fa-solid fa-comments text-3xl text-outline"></i>
-        </div>
-        <div>
-            <h4 class="font-headline-md text-primary mb-2">Chat with AI Assistant</h4>
-            <p class="text-sm text-on-surface-variant max-w-xs mx-auto">Ask questions about your schedule, subjects, payments, or get personalized study tips.</p>
-        </div>
-        <div class="w-full bg-surface-container rounded-2xl p-4 mt-4 border border-outline-variant/30 opacity-60 pointer-events-none">
-            <div class="h-2 w-3/4 bg-surface-container-high rounded-full mb-3"></div>
-            <div class="h-2 w-1/2 bg-surface-container-high rounded-full"></div>
-        </div>
+    
+    <!-- Chatbot iframe - fills remaining space -->
+    <div class="flex-1 w-full bg-white">
+        <iframe 
+            src="https://supportbot.naijaassets.com" 
+            class="w-full h-full border-0" 
+            title="NaijaAssets AI Assistant"
+            loading="lazy"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"
+        ></iframe>
     </div>
-    <div class="p-4 border-t border-outline-variant bg-surface-container-lowest">
-        <div class="flex gap-2">
-            <input type="text" placeholder="Type your question..." class="flex-1 px-4 py-3 rounded-xl bg-surface border border-outline-variant focus:ring-0 text-sm" disabled/>
-            <button class="px-4 py-3 bg-secondary text-white rounded-xl hover:opacity-90 transition-opacity" disabled><i class="fa-solid fa-paper-plane"></i></button>
-        </div>
-    </div>
+    
+    <!-- No footer input needed - chatbot handles its own input -->
 </div>
 
 <!-- Floating AI Chat Button -->
