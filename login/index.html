@@ -103,19 +103,15 @@
     <style>
         body { font-family: 'Manrope', sans-serif; background-color: #f7f9fb; overflow-x: hidden; }
         
-        /* Mobile Menu - Slides from LEFT like dashboard */
-        .mobile-menu-overlay {
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
+        /* Mobile Menu */
+        .mobile-menu-overlay { transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
         .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
         .mobile-menu-overlay.inactive { opacity: 0; visibility: hidden; }
-        .mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
+        .mobile-menu { transition: transform 0.3s ease-in-out; }
         .mobile-menu.active { transform: translateX(0); }
         .mobile-menu.inactive { transform: translateX(-100%); }
         
-        /* Form Transition */
+        /* Form Container Transitions */
         .form-container {
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
@@ -133,204 +129,98 @@
             position: relative;
         }
         
-        /* Compact Form - NaijaAssets Blue Theme */
-        .compact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            max-width: 380px;
-            background-color: #ffffff;
-            padding: 28px;
-            border-radius: 20px;
+        /* Uiverse-style Floating Label Input */
+        .input-group {
             position: relative;
-            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
-            border: 1px solid rgba(198, 198, 205, 0.4);
-        }
-        .compact-title {
-            font-size: 24px;
-            color: #0051d5;
-            font-weight: 700;
-            letter-spacing: -1px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding-left: 30px;
-            margin-bottom: 4px;
-            font-family: 'Hanken Grotesk', sans-serif;
-        }
-        .compact-title::before, .compact-title::after {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 16px;
-            border-radius: 50%;
-            left: 0px;
-            background-color: #0051d5;
-        }
-        .compact-title::before {
-            width: 18px;
-            height: 18px;
-            background-color: #0051d5;
-        }
-        .compact-title::after {
-            width: 18px;
-            height: 18px;
-            animation: pulse 1s linear infinite;
-        }
-        .compact-message {
-            color: #45464d;
-            font-size: 13px;
-            margin-bottom: 16px;
-            line-height: 1.4;
-        }
-        .compact-signin {
-            text-align: center;
-            color: #45464d;
-            font-size: 13px;
-            margin-top: 8px;
-        }
-        .compact-signin a {
-            color: #0051d5;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .compact-signin a:hover {
-            text-decoration: underline #0051d5;
-        }
-        .compact-flex {
-            display: flex;
-            width: 100%;
-            gap: 10px;
-        }
-        .compact-label {
-            position: relative;
-            flex: 1;
-        }
-        .compact-input {
-            width: 100%;
-            padding: 12px 12px 24px 12px;
-            outline: 0;
-            border: 1px solid #c6c6cd;
-            border-radius: 12px;
-            font-size: 14px;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            background: #f7f9fb;
-            font-family: 'Manrope', sans-serif;
-        }
-        .compact-input:focus {
-            border-color: #0051d5;
-            box-shadow: 0 0 0 3px rgba(0, 81, 213, 0.1);
-            background: #ffffff;
-        }
-        .compact-label span {
-            position: absolute;
-            left: 12px;
-            top: 16px;
-            color: #76777d;
-            font-size: 14px;
-            cursor: text;
-            transition: 0.3s ease;
-            pointer-events: none;
-            background: transparent;
-            padding: 0 4px;
-        }
-        .compact-input:placeholder-shown + span {
-            top: 16px;
-            font-size: 14px;
-        }
-        .compact-input:focus + span, .compact-input:valid + span {
-            top: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            color: #0051d5;
-            background: #ffffff;
-        }
-        .compact-input:valid + span {
-            color: #0051d5;
-        }
-        .compact-submit {
-            border: none;
-            outline: none;
-            background-color: #0051d5;
-            padding: 13px;
-            border-radius: 12px;
-            color: #fff;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 4px;
-            font-family: 'Manrope', sans-serif;
-        }
-        .compact-submit:hover {
-            background-color: #003ea8;
-            transform: translateY(-1px);
-        }
-        .compact-submit:active {
-            transform: scale(0.98);
-        }
-        .compact-terms {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin-top: 4px;
-        }
-        .compact-terms input {
-            margin-top: 3px;
-            accent-color: #0051d5;
-        }
-        .compact-terms label {
-            font-size: 12px;
-            color: #45464d;
-            line-height: 1.4;
-        }
-        .compact-terms a {
-            color: #0051d5;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .compact-terms a:hover {
-            text-decoration: underline #0051d5;
-        }
-        .password-toggle {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #76777d;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            font-size: 16px;
-            transition: color 0.2s;
-        }
-        .password-toggle:hover {
-            color: #0051d5;
-        }
-        @keyframes pulse {
-            from { transform: scale(0.9); opacity: 1; }
-            to { transform: scale(1.8); opacity: 0; }
-        }
-        @media (max-width: 768px) {
-            .compact-form {
-                padding: 22px;
-                max-width: 100%;
-            }
-            .compact-flex {
-                flex-direction: column;
-                gap: 14px;
-            }
+            margin-bottom: 20px;
         }
         
-        /* Custom scrollbar for mobile menu */
+        .input-field {
+            width: 100%;
+            padding: 18px 16px 8px 16px;
+            border: 2px solid #c6c6cd;
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: 'Manrope', sans-serif;
+            background: transparent;
+            transition: border-color 0.2s ease;
+            outline: none;
+            color: #191c1e;
+        }
+        
+        .input-field:focus {
+            border-color: #0051d5;
+        }
+        
+        .input-label {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: #76777d;
+            pointer-events: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+            padding: 0 6px;
+        }
+        
+        /* When focused or has value, label floats up and sits on the border */
+        .input-field:focus + .input-label,
+        .input-field:not(:placeholder-shown) + .input-label {
+            top: 0;
+            transform: translateY(-50%);
+            font-size: 12px;
+            font-weight: 600;
+            color: #0051d5;
+            background: #ffffff;
+        }
+        
+        /* When not focused but has value, label stays up but loses blue color */
+        .input-field:not(:focus):not(:placeholder-shown) + .input-label {
+            color: #76777d;
+        }
+        
+        /* Select dropdown styling */
+        select.input-field {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2376777d' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        
+        /* OTP Input */
+        .otp-input {
+            width: 50px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            border: 2px solid #c6c6cd;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        
+        .otp-input:focus {
+            border-color: #0051d5;
+            box-shadow: 0 0 0 3px rgba(0, 81, 213, 0.1);
+        }
+        
+        /* Custom scrollbar */
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        
+        @media (max-width: 768px) {
+            .otp-input {
+                width: 45px;
+                height: 55px;
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface min-h-screen flex flex-col">
@@ -338,7 +228,7 @@
 <!-- Mobile Menu Overlay -->
 <div class="mobile-menu-overlay inactive fixed inset-0 bg-[#0d1c2e]/50 backdrop-blur-sm z-[90] md:hidden" id="mobile-menu-overlay"></div>
 
-<!-- Mobile Menu - Slides from LEFT -->
+<!-- Mobile Menu -->
 <div class="mobile-menu inactive fixed top-0 left-0 h-full w-[85%] max-w-[320px] bg-surface-container-lowest shadow-2xl z-[100] md:hidden flex flex-col" id="mobile-menu">
     <div class="flex justify-between items-center p-5 border-b border-outline-variant/30">
         <a href="/" class="flex items-center gap-3">
@@ -353,9 +243,8 @@
         </button>
     </div>
     
-    <!-- Profile Card -->
     <div class="px-4 py-4 border-b border-outline-variant/30">
-        <a href="#" class="flex items-center gap-3 p-3 bg-surface-container-low rounded-2xl border border-outline-variant/30 hover:bg-surface-container transition-colors">
+        <a href="/login" class="flex items-center gap-3 p-3 bg-surface-container-low rounded-2xl border border-outline-variant/30 hover:bg-surface-container transition-colors">
             <img alt="Guest User" class="w-10 h-10 rounded-full object-cover flex-shrink-0 bg-secondary/10" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230051d5'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E"/>
             <div class="profile-details overflow-hidden">
                 <p class="font-label-md text-primary font-bold truncate">Guest User</p>
@@ -365,7 +254,6 @@
         </a>
     </div>
     
-    <!-- Navigation -->
     <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto custom-scrollbar">
         <a href="/" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
             <i class="fa-solid fa-house w-5 text-center"></i>
@@ -393,7 +281,6 @@
         </a>
     </nav>
     
-    <!-- Footer Links -->
     <div class="px-4 py-4 border-t border-outline-variant/30">
         <div class="flex flex-wrap gap-4 text-[11px]">
             <a href="/privacy" class="text-outline hover:text-primary transition-colors">Privacy</a>
@@ -414,7 +301,6 @@
             </div>
         </a>
         
-        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center gap-6">
             <a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
             <a href="/about" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
@@ -424,17 +310,11 @@
             <a href="/contact" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Contact</a>
         </div>
         
-        <!-- Desktop Auth Buttons -->
         <div class="hidden md:flex items-center gap-3">
-            <a href="/login" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors px-4 py-2">
-                Login
-            </a>
-            <a href="/login?create=account" class="font-body-md text-body-md bg-secondary text-white hover:bg-secondary/90 transition-colors px-5 py-2 rounded-xl shadow-sm active:scale-95 transition-transform">
-                Get Started
-            </a>
+            <a href="/login" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors px-4 py-2">Login</a>
+            <a href="/login?create=account" class="font-body-md text-body-md bg-secondary text-white hover:bg-secondary/90 transition-colors px-5 py-2 rounded-xl shadow-sm active:scale-95 transition-transform">Get Started</a>
         </div>
 
-        <!-- Mobile Menu Button -->
         <button class="md:hidden text-on-surface text-2xl p-2 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -446,113 +326,270 @@
         <!-- Left Side: Forms Container -->
         <div class="flex flex-col items-center justify-center w-full order-2 lg:order-1">
             <div class="w-full max-w-md relative flex justify-center">
+                
                 <!-- Login Form -->
-                <div id="loginForm" class="form-container active bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 transition-all duration-300 hover:shadow-[0px_10px_30px_rgba(15,23,42,0.1)]">
+                <div id="loginForm" class="form-container active bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30">
                     <div class="text-center mb-8">
                         <div class="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 rounded-2xl mb-4">
                             <i class="fa-solid fa-right-to-bracket text-secondary text-2xl"></i>
                         </div>
                         <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Welcome Back</h1>
-                        <p class="font-body-md text-body-md text-on-surface-variant">Login to access your classes, recordings, and schedules.</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Login to access your classes and resources.</p>
                     </div>
-                    <form class="space-y-5" onsubmit="event.preventDefault();">
-                        <div>
-                            <label class="block font-label-md text-label-md text-on-surface mb-2" for="email">Email address</label>
-                            <div class="relative">
-                                <i class="fa-regular fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-outline"></i>
-                                <input class="w-full pl-11 pr-4 py-3 rounded-xl border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="email" placeholder="name@domain.com" type="email"/>
-                            </div>
+                    
+                    <form class="space-y-5" onsubmit="handleLogin(event)">
+                        <div class="input-group">
+                            <input type="email" id="loginEmail" class="input-field" placeholder=" " required/>
+                            <label for="loginEmail" class="input-label">Email address</label>
                         </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="block font-label-md text-label-md text-on-surface" for="password">Password</label>
-                                <a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">Forgot Password?</a>
-                            </div>
-                            <div class="relative">
-                                <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-outline"></i>
-                                <input class="w-full pl-11 pr-11 py-3 rounded-xl border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="password" placeholder="••••••••" type="password"/>
-                                <button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary transition-colors p-1" type="button" id="togglePassword">
-                                    <i class="fa-regular fa-eye"></i>
-                                </button>
-                            </div>
+                        
+                        <div class="input-group">
+                            <input type="password" id="loginPassword" class="input-field" placeholder=" " required/>
+                            <label for="loginPassword" class="input-label">Password</label>
+                            <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary transition-colors" onclick="togglePassword('loginPassword', this)">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
                         </div>
-                        <button class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2 group" type="submit">
+                        
+                        <div class="flex justify-end">
+                            <a href="/login?verify=email" class="font-label-sm text-label-sm text-secondary hover:underline">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2">
                             Login
-                            <i class="fa-solid fa-arrow-right text-[18px] group-hover:translate-x-1 transition-transform"></i>
+                            <i class="fa-solid fa-arrow-right text-[18px]"></i>
                         </button>
                     </form>
-                    <div class="mt-8 text-center">
+                    
+                    <div class="my-6 flex items-center gap-3">
+                        <div class="flex-1 h-px bg-outline-variant/30"></div>
+                        <span class="text-xs text-outline font-medium">OR CONTINUE WITH</span>
+                        <div class="flex-1 h-px bg-outline-variant/30"></div>
+                    </div>
+                    
+                    <button onclick="handleGoogleLogin()" class="w-full py-3 bg-white border-2 border-outline-variant/30 rounded-xl font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        Continue with Google
+                    </button>
+                    
+                    <div class="mt-6 text-center">
                         <p class="font-body-md text-body-md text-on-surface-variant">
                             Don't have an account? 
-                            <a class="text-secondary font-semibold hover:underline cursor-pointer" id="showCreateAccount">Create Account</a>
+                            <a class="text-secondary font-semibold hover:underline cursor-pointer" onclick="showForm('createAccountForm', 'loginForm')">Create Account</a>
                         </p>
                     </div>
                 </div>
                 
-                <!-- Create Account Form - Compact Layout -->
-                <div id="createAccountForm" class="form-container hidden flex justify-center">
-                    <form class="compact-form" onsubmit="event.preventDefault();">
-                        <p class="compact-title">Create Account</p>
-                        <p class="compact-message">Join NaijaAssets to start your learning journey.</p>
+                <!-- Create Account Form -->
+                <div id="createAccountForm" class="form-container hidden bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 rounded-2xl mb-4">
+                            <i class="fa-solid fa-user-plus text-secondary text-2xl"></i>
+                        </div>
+                        <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Create Account</h1>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Join NaijaAssets to start learning.</p>
+                    </div>
+                    
+                    <form class="space-y-5" onsubmit="handleSignup(event)">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="input-group">
+                                <input type="text" id="firstName" class="input-field" placeholder=" " required/>
+                                <label for="firstName" class="input-label">First Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="lastName" class="input-field" placeholder=" " required/>
+                                <label for="lastName" class="input-label">Last Name</label>
+                            </div>
+                        </div>
                         
-                        <div class="compact-flex">
-                            <label class="compact-label">
-                                <input required class="compact-input" type="text" id="firstName"/>
-                                <span>First Name</span>
-                            </label>
-                            <label class="compact-label">
-                                <input required class="compact-input" type="text" id="lastName"/>
-                                <span>Last Name</span>
+                        <div class="input-group">
+                            <input type="email" id="signupEmail" class="input-field" placeholder=" " required/>
+                            <label for="signupEmail" class="input-label">Email Address</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="tel" id="phone" class="input-field" placeholder=" "/>
+                            <label for="phone" class="input-label">Phone Number</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" id="signupPassword" class="input-field" placeholder=" " required minlength="8"/>
+                            <label for="signupPassword" class="input-label">Password</label>
+                            <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary transition-colors" onclick="togglePassword('signupPassword', this)">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" id="confirmPassword" class="input-field" placeholder=" " required minlength="8"/>
+                            <label for="confirmPassword" class="input-label">Confirm Password</label>
+                            <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary transition-colors" onclick="togglePassword('confirmPassword', this)">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" id="terms" required class="mt-1 accent-secondary"/>
+                            <label for="terms" class="text-xs text-on-surface-variant">
+                                I agree to the <a href="/terms" class="text-secondary hover:underline">Terms of Service</a> and <a href="/privacy" class="text-secondary hover:underline">Privacy Policy</a>
                             </label>
                         </div>
                         
-                        <label class="compact-label">
-                            <input required class="compact-input" type="email" id="createEmail"/>
-                            <span>Email Address</span>
-                        </label>
-                        
-                        <label class="compact-label">
-                            <input required class="compact-input" type="tel" id="phone" pattern="^(\+234|0)[0-9]{10}$"/>
-                            <span>Phone Number *</span>
-                        </label>
-                        
-                        <label class="compact-label">
-                            <input required class="compact-input" type="password" id="createPassword"/>
-                            <span>Password</span>
-                            <button type="button" class="password-toggle" id="toggleCreatePassword">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                        </label>
-                        
-                        <label class="compact-label">
-                            <input required class="compact-input" type="password" id="confirmPassword"/>
-                            <span>Confirm Password</span>
-                            <button type="button" class="password-toggle" id="toggleConfirmPassword">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-                        </label>
-                        
-                        <div class="compact-terms">
-                            <input type="checkbox" id="terms" required/>
-                            <label for="terms">
-                                I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="compact-submit">
+                        <button type="submit" class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2">
                             Create Account
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right text-[18px]"></i>
                         </button>
-                        
-                        <p class="compact-signin">
-                            Already have an account? <a href="#" id="showLoginFromCreate">Login</a>
+                    </form>
+                    
+                    <div class="my-6 flex items-center gap-3">
+                        <div class="flex-1 h-px bg-outline-variant/30"></div>
+                        <span class="text-xs text-outline font-medium">OR SIGN UP WITH</span>
+                        <div class="flex-1 h-px bg-outline-variant/30"></div>
+                    </div>
+                    
+                    <button onclick="handleGoogleLogin()" class="w-full py-3 bg-white border-2 border-outline-variant/30 rounded-xl font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                        Continue with Google
+                    </button>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Already have an account? 
+                            <a class="text-secondary font-semibold hover:underline cursor-pointer" onclick="showForm('loginForm', 'createAccountForm')">Login</a>
                         </p>
+                    </div>
+                </div>
+                
+                <!-- Email OTP Verification Form -->
+                <div id="verifyEmailForm" class="form-container hidden bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 rounded-2xl mb-4">
+                            <i class="fa-solid fa-envelope-circle-check text-secondary text-2xl"></i>
+                        </div>
+                        <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Verify Your Email</h1>
+                        <p class="font-body-md text-body-md text-on-surface-variant">We've sent a 6-digit code to<br/><span id="emailDisplay" class="font-semibold text-primary">your email</span></p>
+                    </div>
+                    
+                    <form onsubmit="handleOTPVerification(event)">
+                        <div class="flex justify-center gap-2 md:gap-3 mb-6">
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="0" required/>
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="1" required/>
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="2" required/>
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="3" required/>
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="4" required/>
+                            <input type="text" maxlength="1" class="otp-input" data-otp-index="5" required/>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2 mb-4">
+                            Verify Email
+                            <i class="fa-solid fa-check text-[18px]"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="text-center">
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Didn't receive the code? 
+                            <a class="text-secondary font-semibold hover:underline cursor-pointer" onclick="resendOTP()">Resend</a>
+                        </p>
+                        <p id="resendTimer" class="text-xs text-outline mt-2 hidden">Resend available in <span id="timerCount">60</span>s</p>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-surface-container-low rounded-xl border border-outline-variant/30">
+                        <p class="text-xs text-on-surface-variant">
+                            <i class="fa-solid fa-circle-info text-secondary mr-2"></i>
+                            For demo purposes, use code: <span class="font-bold text-primary">123456</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Onboarding Form -->
+                <div id="onboardingForm" class="form-container hidden bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 rounded-2xl mb-4">
+                            <i class="fa-solid fa-school text-secondary text-2xl"></i>
+                        </div>
+                        <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Complete Your Profile</h1>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Tell us about your school and subjects</p>
+                    </div>
+                    
+                    <form class="space-y-5" onsubmit="handleOnboarding(event)">
+                        <div class="input-group">
+                            <input type="text" id="schoolName" class="input-field" placeholder=" " required/>
+                            <label for="schoolName" class="input-label">School Name</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <select id="studentClass" class="input-field" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="JSS1">JSS 1</option>
+                                <option value="JSS2">JSS 2</option>
+                                <option value="JSS3">JSS 3</option>
+                                <option value="SS1">SS 1</option>
+                                <option value="SS2">SS 2</option>
+                                <option value="SS3">SS 3</option>
+                            </select>
+                            <label for="studentClass" class="input-label">Class</label>
+                        </div>
+                        
+                        <div>
+                            <label class="block font-label-md text-label-md text-on-surface mb-3">Select Subjects (Choose at least 3)</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Mathematics" class="accent-secondary"/>
+                                    <span class="text-sm">Mathematics</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="English" class="accent-secondary"/>
+                                    <span class="text-sm">English</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Physics" class="accent-secondary"/>
+                                    <span class="text-sm">Physics</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Chemistry" class="accent-secondary"/>
+                                    <span class="text-sm">Chemistry</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Biology" class="accent-secondary"/>
+                                    <span class="text-sm">Biology</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Economics" class="accent-secondary"/>
+                                    <span class="text-sm">Economics</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Government" class="accent-secondary"/>
+                                    <span class="text-sm">Government</span>
+                                </label>
+                                <label class="flex items-center gap-2 p-3 border-2 border-outline-variant/30 rounded-xl cursor-pointer hover:border-secondary/50 transition-colors">
+                                    <input type="checkbox" name="subjects" value="Literature" class="accent-secondary"/>
+                                    <span class="text-sm">Literature</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2">
+                            Complete Setup
+                            <i class="fa-solid fa-arrow-right text-[18px]"></i>
+                        </button>
                     </form>
                 </div>
+                
             </div>
         </div>
         
-        <!-- Right Side: Educational Visual/Preview -->
+        <!-- Right Side: Visual -->
         <div class="hidden lg:flex flex-col justify-center items-start space-y-stack-md order-1 lg:order-2">
             <div class="relative w-full aspect-square max-w-xl mx-auto">
                 <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -579,7 +616,7 @@
                         </div>
                     </div>
                     
-                    <img alt="Student studying on laptop" class="w-full h-48 object-cover rounded-xl mb-4 opacity-90 hover:opacity-100 transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vq3n6nrWFvqJwKQNEqCGfOBkrHvTDrh3-BcN9tKIBdcBOsBKANsGaaEHEnzVgfQ_G0d48LIT7Crt9L4CoG00NIc2EpGo_BVK2oWg971OlWT5xyJfR01zzh8giiWegWD0Mbx38lJJ3rfQ4LWaTVnQUpAyzxaASdelchdEV_sd7s5-RKSVCKi3c_E3Ep8RGVQ6WrtvGYTF1FpXJZGR2tswur6740bRnk-8bvEr_slD5KWTXGdp2F2RJQtu9hyMlJY07re_u37Lvq8"/>
+                    <img alt="Student studying" class="w-full h-48 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vq3n6nrWFvqJwKQNEqCGfOBkrHvTDrh3-BcN9tKIBdcBOsBKANsGaaEHEnzVgfQ_G0d48LIT7Crt9L4CoG00NIc2EpGo_BVK2oWg971OlWT5xyJfR01zzh8giiWegWD0Mbx38lJJ3rfQ4LWaTVnQUpAyzxaASdelchdEV_sd7s5-RKSVCKi3c_E3Ep8RGVQ6WrtvGYTF1FpXJZGR2tswur6740bRnk-8bvEr_slD5KWTXGdp2F2RJQtu9hyMlJY07re_u37Lvq8"/>
                     
                     <div class="space-y-3">
                         <div class="h-3 w-full bg-surface-container rounded-full"></div>
@@ -710,90 +747,265 @@
     mobileMenuClose.addEventListener('click', closeMenu);
     mobileMenuOverlay.addEventListener('click', closeMenu);
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu();
-    });
 
     // Form Switching
-    const loginForm = document.getElementById('loginForm');
-    const createAccountForm = document.getElementById('createAccountForm');
-    const showCreateAccount = document.getElementById('showCreateAccount');
-    const showLoginFromCreate = document.getElementById('showLoginFromCreate');
-
     function showForm(formToShow, formToHide) {
-        formToHide.classList.remove('active');
-        formToHide.classList.add('hidden');
+        const toShow = document.getElementById(formToShow);
+        const toHide = document.getElementById(formToHide);
+        
+        toHide.classList.remove('active');
+        toHide.classList.add('hidden');
+        
         setTimeout(() => {
-            formToShow.classList.remove('hidden');
-            formToShow.classList.add('active');
+            toShow.classList.remove('hidden');
+            toShow.classList.add('active');
         }, 150);
     }
 
-    if (showCreateAccount) {
-        showCreateAccount.addEventListener('click', (e) => {
-            e.preventDefault();
-            showForm(createAccountForm, loginForm);
-            history.pushState({}, '', '/login?create=account');
-            document.title = 'Create Account | NaijaAssets';
+    // Password Toggle
+    function togglePassword(inputId, button) {
+        const input = document.getElementById(inputId);
+        const icon = button.querySelector('i');
+        
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.className = 'fa-regular fa-eye-slash';
+        } else {
+            input.type = 'password';
+            icon.className = 'fa-regular fa-eye';
+        }
+    }
+
+    // Mock Backend Functions
+    function simulateAPICall(endpoint, data) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log(`API Call: ${endpoint}`, data);
+                resolve({ success: true, data: data });
+            }, 1000);
         });
     }
 
-    if (showLoginFromCreate) {
-        showLoginFromCreate.addEventListener('click', (e) => {
-            e.preventDefault();
-            showForm(loginForm, createAccountForm);
-            history.pushState({}, '', '/login');
-            document.title = 'Login | NaijaAssets';
-        });
+    // Login Handler
+    async function handleLogin(event) {
+        event.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Logging in...';
+        button.disabled = true;
+        
+        await simulateAPICall('/auth/login', { email, password });
+        
+        localStorage.setItem('user', JSON.stringify({ email, loggedIn: true }));
+        
+        button.innerHTML = originalText;
+        button.disabled = false;
+        
+        window.location.href = '/dashboard';
     }
 
+    // Signup Handler
+    async function handleSignup(event) {
+        event.preventDefault();
+        
+        const password = document.getElementById('signupPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+        
+        const email = document.getElementById('signupEmail').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const phone = document.getElementById('phone').value;
+        
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Creating account...';
+        button.disabled = true;
+        
+        await simulateAPICall('/auth/signup', { email, firstName, lastName, phone, password });
+        
+        localStorage.setItem('pendingUser', JSON.stringify({ email, firstName, lastName, phone }));
+        
+        button.innerHTML = originalText;
+        button.disabled = false;
+        
+        document.getElementById('emailDisplay').textContent = email;
+        showForm('verifyEmailForm', 'createAccountForm');
+        startResendTimer();
+        
+        history.pushState({}, '', '/login?verify=email');
+    }
+
+    // Google Login Handler
+    async function handleGoogleLogin() {
+        const button = event.target.closest('button');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Connecting to Google...';
+        button.disabled = true;
+        
+        await simulateAPICall('/auth/google', {});
+        
+        localStorage.setItem('user', JSON.stringify({ 
+            email: 'user@gmail.com', 
+            name: 'Google User',
+            loggedIn: true,
+            provider: 'google'
+        }));
+        
+        button.innerHTML = originalText;
+        button.disabled = false;
+        
+        const hasOnboarding = localStorage.getItem('onboardingComplete');
+        if (!hasOnboarding) {
+            showForm('onboardingForm', document.querySelector('.form-container.active').id);
+            history.pushState({}, '', '/login?onboarding');
+        } else {
+            window.location.href = '/dashboard';
+        }
+    }
+
+    // OTP Verification
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            const value = e.target.value;
+            if (value && index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+            }
+        });
+        
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+                otpInputs[index - 1].focus();
+            }
+        });
+    });
+
+    async function handleOTPVerification(event) {
+        event.preventDefault();
+        
+        let otp = '';
+        otpInputs.forEach(input => otp += input.value);
+        
+        if (otp.length !== 6) {
+            alert('Please enter all 6 digits');
+            return;
+        }
+        
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Verifying...';
+        button.disabled = true;
+        
+        await simulateAPICall('/auth/verify-otp', { otp });
+        
+        if (otp === '123456') {
+            const pendingUser = JSON.parse(localStorage.getItem('pendingUser'));
+            localStorage.setItem('user', JSON.stringify({ ...pendingUser, loggedIn: true }));
+            localStorage.removeItem('pendingUser');
+            
+            button.innerHTML = originalText;
+            button.disabled = false;
+            
+            showForm('onboardingForm', 'verifyEmailForm');
+            history.pushState({}, '', '/login?onboarding');
+        } else {
+            alert('Invalid OTP. Please try again. (Hint: Use 123456)');
+            button.innerHTML = originalText;
+            button.disabled = false;
+            otpInputs.forEach(input => input.value = '');
+            otpInputs[0].focus();
+        }
+    }
+
+    // Resend OTP Timer
+    function startResendTimer() {
+        const timerEl = document.getElementById('resendTimer');
+        const countEl = document.getElementById('timerCount');
+        timerEl.classList.remove('hidden');
+        
+        let count = 60;
+        const interval = setInterval(() => {
+            count--;
+            countEl.textContent = count;
+            
+            if (count <= 0) {
+                clearInterval(interval);
+                timerEl.classList.add('hidden');
+            }
+        }, 1000);
+    }
+
+    function resendOTP() {
+        alert('OTP resent! Check your email.');
+        startResendTimer();
+    }
+
+    // Onboarding Handler
+    async function handleOnboarding(event) {
+        event.preventDefault();
+        
+        const schoolName = document.getElementById('schoolName').value;
+        const studentClass = document.getElementById('studentClass').value;
+        const subjects = Array.from(document.querySelectorAll('input[name="subjects"]:checked')).map(cb => cb.value);
+        
+        if (subjects.length < 3) {
+            alert('Please select at least 3 subjects');
+            return;
+        }
+        
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Setting up...';
+        button.disabled = true;
+        
+        await simulateAPICall('/user/onboarding', { schoolName, studentClass, subjects });
+        
+        localStorage.setItem('onboardingComplete', 'true');
+        
+        button.innerHTML = originalText;
+        button.disabled = false;
+        
+        window.location.href = '/dashboard';
+    }
+
+    // Handle URL parameters on load
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
+         
         if (urlParams.get('create') === 'account') {
-            showForm(createAccountForm, loginForm);
-            document.title = 'Create Account | NaijaAssets';
+            showForm('createAccountForm', 'loginForm');
+        } else if (urlParams.get('verify') === 'email') {
+            const pendingUser = JSON.parse(localStorage.getItem('pendingUser') || '{}');
+            if (pendingUser.email) {
+                document.getElementById('emailDisplay').textContent = pendingUser.email;
+                showForm('verifyEmailForm', 'loginForm'); 
+                startResendTimer();
+            }
+        } else if (urlParams.get('onboarding')) {
+            showForm('onboardingForm', 'loginForm');
         }
     });
 
-    // Password Toggles
-    const toggleBtn = document.getElementById('togglePassword');
-    const passInput = document.getElementById('password');
-    if(toggleBtn && passInput) {
-        toggleBtn.addEventListener('click', () => {
-            const isPass = passInput.type === 'password';
-            passInput.type = isPass ? 'text' : 'password';
-            toggleBtn.innerHTML = isPass ? '<i class="fa-regular fa-eye-slash"></i>' : '<i class="fa-regular fa-eye"></i>';
-        });
-    }
-
-    const toggleCreateBtn = document.getElementById('toggleCreatePassword');
-    const createPassInput = document.getElementById('createPassword');
-    if(toggleCreateBtn && createPassInput) {
-        toggleCreateBtn.addEventListener('click', () => {
-            const isPass = createPassInput.type === 'password';
-            createPassInput.type = isPass ? 'text' : 'password';
-            toggleCreateBtn.innerHTML = isPass ? '<i class="fa-regular fa-eye-slash"></i>' : '<i class="fa-regular fa-eye"></i>';
-        });
-    }
-
-    const toggleConfirmBtn = document.getElementById('toggleConfirmPassword');
-    const confirmPassInput = document.getElementById('confirmPassword');
-    if(toggleConfirmBtn && confirmPassInput) {
-        toggleConfirmBtn.addEventListener('click', () => {
-            const isPass = confirmPassInput.type === 'password';
-            confirmPassInput.type = isPass ? 'text' : 'password';
-            toggleConfirmBtn.innerHTML = isPass ? '<i class="fa-regular fa-eye-slash"></i>' : '<i class="fa-regular fa-eye"></i>';
-        });
-    }
-
+    // Handle browser back/forward
     window.addEventListener('popstate', () => {
         const urlParams = new URLSearchParams(window.location.search);
+        
         if (urlParams.get('create') === 'account') {
-            showForm(createAccountForm, loginForm);
-            document.title = 'Create Account | NaijaAssets';
+            showForm('createAccountForm', document.querySelector('.form-container.active').id);
+        } else if (urlParams.get('verify') === 'email') {
+            showForm('verifyEmailForm', document.querySelector('.form-container.active').id);
+        } else if (urlParams.get('onboarding')) {
+            showForm('onboardingForm', document.querySelector('.form-container.active').id);
         } else {
-            showForm(loginForm, createAccountForm);
-            document.title = 'Login | NaijaAssets';
+            showForm('loginForm', document.querySelector('.form-container.active').id);
         }
     });
 </script>
