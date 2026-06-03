@@ -4,11 +4,8 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Login | NaijaAssets</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
       tailwind.config = {
@@ -16,118 +13,108 @@
         theme: {
           extend: {
             "colors": {
-                    "on-secondary": "#ffffff",
-                    "on-error-container": "#93000a",
-                    "surface-dim": "#ccdbf3",
-                    "on-tertiary-container": "#316e52",
-                    "on-tertiary": "#ffffff",
-                    "primary-fixed-dim": "#b0c8eb",
-                    "on-background": "#0d1c2e",
-                    "on-secondary-container": "#fefcff",
-                    "on-error": "#ffffff",
-                    "surface-container": "#e6eeff",
-                    "secondary": "#2c694e",
-                    "error-container": "#ffdad6",
-                    "primary": "#000f22",
-                    "on-primary-fixed": "#001c37",
-                    "tertiary-container": "#002114",
-                    "tertiary-fixed": "#71f8e4",
-                    "secondary-fixed": "#d2e4ff",
-                    "secondary-container": "#aeeecb",
-                    "surface-container-low": "#eff4ff",
-                    "on-primary-fixed-variant": "#3f465c",
-                    "outline": "#74777e",
-                    "on-tertiary-fixed-variant": "#005048",
-                    "secondary-fixed-dim": "#95d4b3",
-                    "error": "#ba1a1a",
-                    "inverse-surface": "#2d3133",
-                    "on-primary-container": "#768dad",
-                    "on-primary": "#ffffff",
-                    "background": "#f8f9ff",
-                    "outline-variant": "#c4c6ce",
-                    "on-secondary-fixed-variant": "#003ea8",
-                    "surface-variant": "#e0e3e5",
-                    "on-surface": "#0d1c2e",
-                    "surface-bright": "#f8f9ff",
-                    "tertiary": "#2c694e",
-                    "surface-container-highest": "#d5e3fc",
-                    "tertiary-fixed-dim": "#4fdbc8",
-                    "surface-container-high": "#dce9ff",
-                    "inverse-primary": "#bec6e0",
-                    "on-secondary-fixed": "#002114",
-                    "primary-fixed": "#d2e4ff",
-                    "on-surface-variant": "#43474d",
-                    "surface-tint": "#565e74",
-                    "inverse-on-surface": "#eff1f3",
-                    "surface-container-lowest": "#ffffff",
-                    "primary-container": "#0a2540",
-                    "surface": "#f8f9ff",
-                    "on-tertiary-fixed": "#191c1e"
+                "outline": "#76777d",
+                "on-surface": "#191c1e",
+                "on-secondary": "#ffffff",
+                "primary": "#000000",
+                "on-primary-container": "#7c839b",
+                "primary-container": "#131b2e",
+                "on-secondary-fixed": "#00174b",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed-dim": "#b4c5ff",
+                "surface": "#f7f9fb",
+                "secondary-fixed": "#dbe1ff",
+                "error": "#ba1a1a",
+                "surface-variant": "#e0e3e5",
+                "inverse-surface": "#2d3133",
+                "tertiary-fixed-dim": "#4fdbc8",
+                "on-tertiary-container": "#009485",
+                "error-container": "#ffdad6",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#00201c",
+                "on-primary": "#ffffff",
+                "background": "#f7f9fb",
+                "secondary-container": "#316bf3",
+                "surface-container": "#eceef0",
+                "primary-fixed-dim": "#bec6e0",
+                "on-tertiary-fixed-variant": "#005048",
+                "outline-variant": "#c6c6cd",
+                "secondary": "#0051d5",
+                "on-tertiary": "#ffffff",
+                "tertiary": "#000000",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-highest": "#e0e3e5",
+                "on-secondary-fixed-variant": "#003ea8",
+                "surface-tint": "#565e74",
+                "surface-dim": "#d8dadc",
+                "inverse-primary": "#bec6e0",
+                "inverse-on-surface": "#eff1f3",
+                "primary-fixed": "#dae2fd",
+                "tertiary-container": "#00201c",
+                "on-background": "#191c1e",
+                "surface-container-low": "#f2f4f6",
+                "on-surface-variant": "#45464d",
+                "tertiary-fixed": "#71f8e4",
+                "on-primary-fixed-variant": "#3f465c",
+                "on-primary-fixed": "#131b2e"
             },
             "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
             },
             "spacing": {
-                    "unit": "8px",
-                    "margin-mobile": "16px",
-                    "stack-lg": "48px",
-                    "gutter": "24px",
-                    "stack-md": "24px",
-                    "margin-desktop": "40px",
-                    "stack-sm": "12px",
-                    "container-max": "1280px"
+                "unit": "8px",
+                "margin-mobile": "16px",
+                "stack-lg": "48px",
+                "gutter": "24px",
+                "stack-md": "24px",
+                "margin-desktop": "40px",
+                "stack-sm": "12px",
+                "container-max": "1280px"
             },
             "fontFamily": {
-                    "label-md": ["Geist"],
-                    "display-lg": ["Hanken Grotesk"],
-                    "display-lg-mobile": ["Hanken Grotesk"],
-                    "label-sm": ["Geist"],
-                    "body-lg": ["Manrope"],
-                    "headline-lg": ["Hanken Grotesk"],
-                    "body-md": ["Manrope"],
-                    "headline-md": ["Hanken Grotesk"]
+                "label-md": ["Geist"],
+                "display-lg": ["Hanken Grotesk"],
+                "display-lg-mobile": ["Hanken Grotesk"],
+                "label-sm": ["Geist"],
+                "body-lg": ["Manrope"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Manrope"],
+                "headline-md": ["Hanken Grotesk"]
             },
             "fontSize": {
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
-                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
             }
           },
         },
       }
     </script>
     <style>
-        body { font-family: 'Manrope', sans-serif; background-color: #f8f9ff; }
-        .glass-effect { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-        /* Mobile Menu Transitions */
+        body { font-family: 'Manrope', sans-serif; background-color: #f7f9fb; overflow-x: hidden; }
+        
+        /* Mobile Menu - Slides from LEFT like dashboard */
         .mobile-menu-overlay {
             transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
         }
-        .mobile-menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .mobile-menu-overlay.inactive {
-            opacity: 0;
-            visibility: hidden;
-        }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu-overlay.inactive { opacity: 0; visibility: hidden; }
         .mobile-menu {
             transition: transform 0.3s ease-in-out;
         }
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        .mobile-menu.inactive {
-            transform: translateX(100%);
-        }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-menu.inactive { transform: translateX(-100%); }
+        
         /* Form Transition */
         .form-container {
             transition: opacity 0.3s ease, transform 0.3s ease;
@@ -145,22 +132,23 @@
             pointer-events: all;
             position: relative;
         }
-        /* Compact Form Layout - Uiverse.io Structure with NaijaAssets Styling */
+        
+        /* Compact Form - NaijaAssets Blue Theme */
         .compact-form {
             display: flex;
             flex-direction: column;
             gap: 14px;
-            max-width: 350px;
-            background-color: #fff;
-            padding: 24px;
+            max-width: 380px;
+            background-color: #ffffff;
+            padding: 28px;
             border-radius: 20px;
             position: relative;
-            box-shadow: 0px 4px 20px rgba(13,28,46,0.05);
-            border: 1px solid rgba(196, 198, 206, 0.3);
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+            border: 1px solid rgba(198, 198, 205, 0.4);
         }
         .compact-title {
             font-size: 24px;
-            color: #2c694e;
+            color: #0051d5;
             font-weight: 700;
             letter-spacing: -1px;
             position: relative;
@@ -168,6 +156,7 @@
             align-items: center;
             padding-left: 30px;
             margin-bottom: 4px;
+            font-family: 'Hanken Grotesk', sans-serif;
         }
         .compact-title::before, .compact-title::after {
             position: absolute;
@@ -176,12 +165,12 @@
             width: 16px;
             border-radius: 50%;
             left: 0px;
-            background-color: #2c694e;
+            background-color: #0051d5;
         }
         .compact-title::before {
             width: 18px;
             height: 18px;
-            background-color: #2c694e;
+            background-color: #0051d5;
         }
         .compact-title::after {
             width: 18px;
@@ -189,24 +178,24 @@
             animation: pulse 1s linear infinite;
         }
         .compact-message {
-            color: rgba(67, 71, 77, 0.822);
+            color: #45464d;
             font-size: 13px;
             margin-bottom: 16px;
             line-height: 1.4;
         }
         .compact-signin {
             text-align: center;
-            color: rgba(67, 71, 77, 0.822);
+            color: #45464d;
             font-size: 13px;
             margin-top: 8px;
         }
         .compact-signin a {
-            color: #2c694e;
+            color: #0051d5;
             font-weight: 600;
             text-decoration: none;
         }
         .compact-signin a:hover {
-            text-decoration: underline #2c694e;
+            text-decoration: underline #0051d5;
         }
         .compact-flex {
             display: flex;
@@ -221,21 +210,23 @@
             width: 100%;
             padding: 12px 12px 24px 12px;
             outline: 0;
-            border: 1px solid rgba(116, 119, 126, 0.4);
+            border: 1px solid #c6c6cd;
             border-radius: 12px;
             font-size: 14px;
-            transition: border-color 0.2s;
-            background: #f8f9ff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #f7f9fb;
+            font-family: 'Manrope', sans-serif;
         }
         .compact-input:focus {
-            border-color: #2c694e;
-            box-shadow: 0 0 0 3px rgba(44, 105, 78, 0.1);
+            border-color: #0051d5;
+            box-shadow: 0 0 0 3px rgba(0, 81, 213, 0.1);
+            background: #ffffff;
         }
         .compact-label span {
             position: absolute;
             left: 12px;
             top: 16px;
-            color: #74777e;
+            color: #76777d;
             font-size: 14px;
             cursor: text;
             transition: 0.3s ease;
@@ -251,17 +242,17 @@
             top: 4px;
             font-size: 11px;
             font-weight: 600;
-            color: #2c694e;
-            background: #fff;
+            color: #0051d5;
+            background: #ffffff;
         }
         .compact-input:valid + span {
-            color: #2c694e;
+            color: #0051d5;
         }
         .compact-submit {
             border: none;
             outline: none;
-            background-color: #2c694e;
-            padding: 12px;
+            background-color: #0051d5;
+            padding: 13px;
             border-radius: 12px;
             color: #fff;
             font-size: 15px;
@@ -273,9 +264,10 @@
             justify-content: center;
             gap: 8px;
             margin-top: 4px;
+            font-family: 'Manrope', sans-serif;
         }
         .compact-submit:hover {
-            background-color: #255a43;
+            background-color: #003ea8;
             transform: translateY(-1px);
         }
         .compact-submit:active {
@@ -289,27 +281,27 @@
         }
         .compact-terms input {
             margin-top: 3px;
-            accent-color: #2c694e;
+            accent-color: #0051d5;
         }
         .compact-terms label {
             font-size: 12px;
-            color: rgba(67, 71, 77, 0.822);
+            color: #45464d;
             line-height: 1.4;
         }
         .compact-terms a {
-            color: #2c694e;
+            color: #0051d5;
             font-weight: 600;
             text-decoration: none;
         }
         .compact-terms a:hover {
-            text-decoration: underline #2c694e;
+            text-decoration: underline #0051d5;
         }
         .password-toggle {
             position: absolute;
             right: 12px;
             top: 50%;
             transform: translateY(-50%);
-            color: #74777e;
+            color: #76777d;
             background: none;
             border: none;
             cursor: pointer;
@@ -318,22 +310,15 @@
             transition: color 0.2s;
         }
         .password-toggle:hover {
-            color: #2c694e;
+            color: #0051d5;
         }
         @keyframes pulse {
-            from {
-                transform: scale(0.9);
-                opacity: 1;
-            }
-            to {
-                transform: scale(1.8);
-                opacity: 0;
-            }
+            from { transform: scale(0.9); opacity: 1; }
+            to { transform: scale(1.8); opacity: 0; }
         }
-        /* Responsive adjustments for compact form */
         @media (max-width: 768px) {
             .compact-form {
-                padding: 20px;
+                padding: 22px;
                 max-width: 100%;
             }
             .compact-flex {
@@ -341,33 +326,110 @@
                 gap: 14px;
             }
         }
+        
+        /* Custom scrollbar for mobile menu */
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     </style>
 </head>
-<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay inactive fixed inset-0 bg-[#0d1c2e]/50 backdrop-blur-sm z-[90] md:hidden" id="mobile-menu-overlay"></div>
+
+<!-- Mobile Menu - Slides from LEFT -->
+<div class="mobile-menu inactive fixed top-0 left-0 h-full w-[85%] max-w-[320px] bg-surface-container-lowest shadow-2xl z-[100] md:hidden flex flex-col" id="mobile-menu">
+    <div class="flex justify-between items-center p-5 border-b border-outline-variant/30">
+        <a href="/" class="flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-secondary text-2xl flex-shrink-0"></i>
+            <div class="flex flex-col">
+                <span class="font-display-lg text-primary text-lg font-bold leading-tight">NaijaAssets</span>
+                <span class="font-label-sm text-outline text-[10px] uppercase tracking-wider">Student Portal</span>
+            </div>
+        </a>
+        <button class="text-on-surface-variant text-2xl p-2 hover:text-secondary transition-colors" id="mobile-menu-close" aria-label="Close menu">
+            <i class="fa-solid fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Profile Card -->
+    <div class="px-4 py-4 border-b border-outline-variant/30">
+        <a href="#" class="flex items-center gap-3 p-3 bg-surface-container-low rounded-2xl border border-outline-variant/30 hover:bg-surface-container transition-colors">
+            <img alt="Guest User" class="w-10 h-10 rounded-full object-cover flex-shrink-0 bg-secondary/10" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230051d5'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E"/>
+            <div class="profile-details overflow-hidden">
+                <p class="font-label-md text-primary font-bold truncate">Guest User</p>
+                <p class="text-[10px] text-outline truncate mb-1">Not signed in</p>
+                <span class="text-[10px] text-secondary font-bold">Sign in to continue</span>
+            </div>
+        </a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="flex-1 px-4 py-4 space-y-1 overflow-y-auto custom-scrollbar">
+        <a href="/" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-house w-5 text-center"></i>
+            <span class="font-label-md text-label-md">Home</span>
+        </a>
+        <a href="/about" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-circle-info w-5 text-center"></i>
+            <span class="font-label-md text-label-md">About</span>
+        </a>
+        <a href="/subjects" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-book-open w-5 text-center"></i>
+            <span class="font-label-md text-label-md">Subjects</span>
+        </a>
+        <a href="/pricing" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-tag w-5 text-center"></i>
+            <span class="font-label-md text-label-md">Pricing</span>
+        </a>
+        <a href="/faq" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-circle-question w-5 text-center"></i>
+            <span class="font-label-md text-label-md">FAQ</span>
+        </a>
+        <a href="/contact" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-lg">
+            <i class="fa-solid fa-envelope w-5 text-center"></i>
+            <span class="font-label-md text-label-md">Contact</span>
+        </a>
+    </nav>
+    
+    <!-- Footer Links -->
+    <div class="px-4 py-4 border-t border-outline-variant/30">
+        <div class="flex flex-wrap gap-4 text-[11px]">
+            <a href="/privacy" class="text-outline hover:text-primary transition-colors">Privacy</a>
+            <a href="/terms" class="text-outline hover:text-primary transition-colors">Terms</a>
+            <a href="/support" class="text-outline hover:text-primary transition-colors">Support</a>
+        </div>
+    </div>
+</div>
+
 <!-- Top Navigation -->
 <header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
     <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16">
-        <a href="/" class="flex items-center gap-2">
-            <i class="fa-solid fa-graduation-cap text-secondary text-2xl"></i>
-            <span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">NaijaAssets</span>
+        <a href="/" class="flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-secondary text-2xl flex-shrink-0"></i>
+            <div class="flex flex-col">
+                <span class="font-display-lg text-primary text-lg font-bold leading-tight">NaijaAssets</span>
+                <span class="font-label-sm text-outline text-[10px] uppercase tracking-wider hidden sm:block">Student Portal</span>
+            </div>
         </a>
         
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-8">
-            <a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">Home</a>
-            <a href="/about" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">About</a>
-            <a href="/subjects" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">Subjects</a>
-            <a href="/pricing" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">Pricing</a>
-            <a href="/faq" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">FAQ</a>
-            <a href="/contact" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors uppercase tracking-wide">Contact</a>
+        <div class="hidden md:flex items-center gap-6">
+            <a href="/" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Home</a>
+            <a href="/about" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">About</a>
+            <a href="/subjects" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Subjects</a>
+            <a href="/pricing" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Pricing</a>
+            <a href="/faq" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">FAQ</a>
+            <a href="/contact" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors">Contact</a>
         </div>
         
         <!-- Desktop Auth Buttons -->
-        <div class="hidden md:flex items-center gap-4">
+        <div class="hidden md:flex items-center gap-3">
             <a href="/login" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors px-4 py-2">
                 Login
             </a>
-            <a href="/login?create=account" class="font-body-md text-body-md bg-primary text-white hover:opacity-90 transition-opacity px-5 py-2 rounded-full shadow-sm active:scale-95 transition-transform">
+            <a href="/login?create=account" class="font-body-md text-body-md bg-secondary text-white hover:bg-secondary/90 transition-colors px-5 py-2 rounded-xl shadow-sm active:scale-95 transition-transform">
                 Get Started
             </a>
         </div>
@@ -379,72 +441,27 @@
     </div>
 </header>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay inactive fixed inset-0 bg-[#0d1c2e]/50 backdrop-blur-sm z-50 md:hidden" id="mobile-menu-overlay"></div>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu inactive fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-surface shadow-2xl z-50 md:hidden flex flex-col" id="mobile-menu">
-    <div class="flex justify-between items-center p-6 border-b border-outline-variant/30">
-        <a href="/" class="flex items-center gap-2">
-            <i class="fa-solid fa-graduation-cap text-secondary text-2xl"></i>
-            <span class="text-headline-md font-bold text-primary">NaijaAssets</span>
-        </a>
-        <button class="text-on-surface-variant text-2xl p-2 hover:text-secondary transition-colors" id="mobile-menu-close" aria-label="Close menu">
-            <i class="fa-solid fa-times"></i>
-        </button>
-    </div>
-    
-    <div class="flex flex-col p-6 gap-2 flex-1 overflow-y-auto">
-        <nav class="flex flex-col gap-1">
-            <a href="/" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">Home</a>
-            <a href="/about" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">About</a>
-            <a href="/subjects" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">Subjects</a>
-            <a href="/pricing" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">Pricing</a>
-            <a href="/faq" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">FAQ</a>
-            <a href="/contact" class="px-4 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-colors font-body-md font-medium">Contact</a>
-        </nav>
-        
-        <div class="mt-auto pt-6 border-t border-outline-variant/30 flex flex-col gap-4">
-            <a href="/login?create=account" class="w-full font-body-md font-medium bg-primary text-white px-6 py-3 rounded-full shadow-sm active:scale-95 transition-transform text-center">
-                Get Started
-            </a>
-            <a href="/login" class="w-full font-body-md font-medium text-on-surface-variant border border-outline-variant/30 px-6 py-3 rounded-full hover:bg-surface-container transition-colors active:scale-95 text-center">
-                Login
-            </a>
-        </div>
-        
-        <div class="flex gap-4 mt-6 pt-6 border-t border-outline-variant/30">
-            <a href="/fb" aria-label="Facebook" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary-container transition-colors">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="/tk" aria-label="TikTok" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary-container transition-colors">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="/ig" aria-label="Instagram" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary-container transition-colors">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="/x" aria-label="X/Twitter" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary-container transition-colors">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-        </div>
-    </div>
-</div>
-
 <main class="flex-grow flex items-center justify-center pt-24 pb-12 px-margin-mobile">
     <div class="max-w-container-max w-full grid lg:grid-cols-2 gap-gutter items-center">
         <!-- Left Side: Forms Container -->
         <div class="flex flex-col items-center justify-center w-full order-2 lg:order-1">
             <div class="w-full max-w-md relative flex justify-center">
                 <!-- Login Form -->
-                <div id="loginForm" class="form-container active bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0px_4px_20px_rgba(13,28,46,0.05)] border border-outline-variant/20 transition-all duration-300 hover:shadow-[0px_10px_30px_rgba(13,28,46,0.1)]">
-                    <div class="text-center mb-stack-lg">
+                <div id="loginForm" class="form-container active bg-surface-container-lowest p-8 md:p-10 rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 transition-all duration-300 hover:shadow-[0px_10px_30px_rgba(15,23,42,0.1)]">
+                    <div class="text-center mb-8">
+                        <div class="inline-flex items-center justify-center w-14 h-14 bg-secondary/10 rounded-2xl mb-4">
+                            <i class="fa-solid fa-right-to-bracket text-secondary text-2xl"></i>
+                        </div>
                         <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Welcome Back</h1>
                         <p class="font-body-md text-body-md text-on-surface-variant">Login to access your classes, recordings, and schedules.</p>
                     </div>
-                    <form class="space-y-stack-md" onsubmit="event.preventDefault();">
+                    <form class="space-y-5" onsubmit="event.preventDefault();">
                         <div>
                             <label class="block font-label-md text-label-md text-on-surface mb-2" for="email">Email address</label>
-                            <input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="email" placeholder="name@domain.com" type="email"/>
+                            <div class="relative">
+                                <i class="fa-regular fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-outline"></i>
+                                <input class="w-full pl-11 pr-4 py-3 rounded-xl border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="email" placeholder="name@domain.com" type="email"/>
+                            </div>
                         </div>
                         <div>
                             <div class="flex justify-between items-center mb-2">
@@ -452,18 +469,19 @@
                                 <a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">Forgot Password?</a>
                             </div>
                             <div class="relative">
-                                <input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="password" placeholder="••••••••" type="password"/>
-                                <button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant" type="button" id="togglePassword">
+                                <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-outline"></i>
+                                <input class="w-full pl-11 pr-11 py-3 rounded-xl border border-outline-variant bg-surface-bright focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all font-body-md text-body-md" id="password" placeholder="••••••••" type="password"/>
+                                <button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary transition-colors p-1" type="button" id="togglePassword">
                                     <i class="fa-regular fa-eye"></i>
                                 </button>
                             </div>
                         </div>
-                        <button class="w-full py-4 bg-primary text-on-primary rounded-full font-label-md text-label-md hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2 group" type="submit">
+                        <button class="w-full py-3.5 bg-secondary text-white rounded-xl font-label-md text-label-md font-semibold hover:bg-secondary/90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2 group" type="submit">
                             Login
-                            <i class="fa-solid fa-arrow-right text-[20px] group-hover:translate-x-1 transition-transform"></i>
+                            <i class="fa-solid fa-arrow-right text-[18px] group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </form>
-                    <div class="mt-stack-lg text-center">
+                    <div class="mt-8 text-center">
                         <p class="font-body-md text-body-md text-on-surface-variant">
                             Don't have an account? 
                             <a class="text-secondary font-semibold hover:underline cursor-pointer" id="showCreateAccount">Create Account</a>
@@ -471,7 +489,7 @@
                     </div>
                 </div>
                 
-                <!-- Create Account Form - Compact Layout with Original Content -->
+                <!-- Create Account Form - Compact Layout -->
                 <div id="createAccountForm" class="form-container hidden flex justify-center">
                     <form class="compact-form" onsubmit="event.preventDefault();">
                         <p class="compact-title">Create Account</p>
@@ -537,35 +555,31 @@
         <!-- Right Side: Educational Visual/Preview -->
         <div class="hidden lg:flex flex-col justify-center items-start space-y-stack-md order-1 lg:order-2">
             <div class="relative w-full aspect-square max-w-xl mx-auto">
-                <!-- Subtle Abstract Shape -->
                 <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl animate-pulse"></div>
                 
-                <!-- Dashboard Preview Mockup -->
-                <div class="relative z-10 bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 p-6 overflow-hidden">
+                <div class="relative z-10 bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant/30 p-6 overflow-hidden">
                     <div class="flex items-center justify-between mb-6">
                         <div class="space-y-1">
                             <div class="h-4 w-32 bg-surface-container-high rounded-full"></div>
                             <div class="h-3 w-20 bg-surface-container rounded-full"></div>
                         </div>
-                        <div class="h-10 w-10 rounded-full bg-secondary-container/20 flex items-center justify-center">
+                        <div class="h-10 w-10 rounded-xl bg-secondary/10 flex items-center justify-center">
                             <i class="fa-solid fa-school text-secondary"></i>
                         </div>
                     </div>
                     
-                    <!-- Mini Cards Bento Style -->
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="p-4 rounded-lg border border-outline-variant/20 bg-surface-bright shadow-sm">
+                        <div class="p-4 rounded-xl border border-outline-variant/20 bg-surface-bright shadow-sm">
                             <div class="h-2 w-12 bg-secondary/20 rounded-full mb-3"></div>
                             <div class="h-5 w-24 bg-surface-container-highest rounded-full"></div>
                         </div>
-                        <div class="p-4 rounded-lg border border-outline-variant/20 bg-surface-bright shadow-sm">
+                        <div class="p-4 rounded-xl border border-outline-variant/20 bg-surface-bright shadow-sm">
                             <div class="h-2 w-12 bg-secondary-container/20 rounded-full mb-3"></div>
                             <div class="h-5 w-20 bg-surface-container-highest rounded-full"></div>
                         </div>
                     </div>
                     
-                    <!-- Main Illustration -->
-                    <img alt="Student studying on laptop" class="w-full h-48 object-cover rounded-lg mb-4 opacity-90 hover:opacity-100 transition-opacity duration-500" data-alt="A clean, minimalist high-angle shot of an organized desk featuring a modern laptop showing an educational dashboard. The lighting is soft and natural, suggesting a calm morning atmosphere. Surrounding the laptop are a neat notebook, a steaming ceramic mug, and a single green succulent plant. The color palette is composed of soft slates, whites, and deep navy accents, reflecting a premium-lite academic aesthetic that is both focused and tranquil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vq3n6nrWFvqJwKQNEqCGfOBkrHvTDrh3-BcN9tKIBdcBOsBKANsGaaEHEnzVgfQ_G0d48LIT7Crt9L4CoG00NIc2EpGo_BVK2oWg971OlWT5xyJfR01zzh8giiWegWD0Mbx38lJJ3rfQ4LWaTVnQUpAyzxaASdelchdEV_sd7s5-RKSVCKi3c_E3Ep8RGVQ6WrtvGYTF1FpXJZGR2tswur6740bRnk-8bvEr_slD5KWTXGdp2F2RJQtu9hyMlJY07re_u37Lvq8"/>
+                    <img alt="Student studying on laptop" class="w-full h-48 object-cover rounded-xl mb-4 opacity-90 hover:opacity-100 transition-opacity duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8vq3n6nrWFvqJwKQNEqCGfOBkrHvTDrh3-BcN9tKIBdcBOsBKANsGaaEHEnzVgfQ_G0d48LIT7Crt9L4CoG00NIc2EpGo_BVK2oWg971OlWT5xyJfR01zzh8giiWegWD0Mbx38lJJ3rfQ4LWaTVnQUpAyzxaASdelchdEV_sd7s5-RKSVCKi3c_E3Ep8RGVQ6WrtvGYTF1FpXJZGR2tswur6740bRnk-8bvEr_slD5KWTXGdp2F2RJQtu9hyMlJY07re_u37Lvq8"/>
                     
                     <div class="space-y-3">
                         <div class="h-3 w-full bg-surface-container rounded-full"></div>
@@ -574,7 +588,6 @@
                     </div>
                 </div>
                 
-                <!-- Decorative Badge -->
                 <div class="absolute -bottom-6 -left-6 bg-secondary text-white p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce shadow-secondary/20">
                     <i class="fa-solid fa-star"></i>
                     <div>
@@ -587,15 +600,17 @@
     </div>
 </main>
 
-<!-- Footer - Original NaijaAssets Structure -->
+<!-- Footer -->
 <footer class="bg-surface-dim border-t border-outline-variant/30 py-stack-lg px-margin-desktop">
     <div class="max-w-container-max mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <!-- Column 1: Brand -->
             <div class="md:col-span-1">
-                <div class="flex items-center gap-2 mb-4">
+                <div class="flex items-center gap-3 mb-4">
                     <i class="fa-solid fa-graduation-cap text-secondary text-2xl"></i>
-                    <span class="font-headline-md font-bold text-primary">NaijaAssets</span>
+                    <div class="flex flex-col">
+                        <span class="font-headline-md font-bold text-primary">NaijaAssets</span>
+                        <span class="text-[10px] text-outline uppercase tracking-wider">Student Portal</span>
+                    </div>
                 </div>
                 <p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-xs">
                     Structured online tutoring for Nigerian secondary school students.
@@ -616,7 +631,6 @@
                 </div>
             </div>
 
-            <!-- Column 2: Navigation -->
             <div class="md:col-span-1">
                 <h4 class="font-headline-sm text-headline-sm font-bold text-primary mb-4 uppercase tracking-wide">Navigation</h4>
                 <nav class="flex flex-col gap-3">
@@ -629,7 +643,6 @@
                 </nav>
             </div>
 
-            <!-- Column 3: Subjects -->
             <div class="md:col-span-1">
                 <h4 class="font-headline-sm text-headline-sm font-bold text-primary mb-4 uppercase tracking-wide">Subjects</h4>
                 <nav class="flex flex-col gap-3">
@@ -639,7 +652,6 @@
                 </nav>
             </div>
 
-            <!-- Column 4: Legal -->
             <div class="md:col-span-1">
                 <h4 class="font-headline-sm text-headline-sm font-bold text-primary mb-4 uppercase tracking-wide">Legal</h4>
                 <nav class="flex flex-col gap-3">
@@ -650,7 +662,6 @@
             </div>
         </div>
 
-        <!-- Bottom Bar -->
         <div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-outline-variant/30 gap-4">
             <p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 NaijaAssets. All rights reserved.</p>
             <div class="flex gap-5">
@@ -672,7 +683,7 @@
 </footer>
 
 <script>
-    // Mobile Menu Functionality
+    // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -698,24 +709,15 @@
     mobileMenuBtn.addEventListener('click', openMenu);
     mobileMenuClose.addEventListener('click', closeMenu);
     mobileMenuOverlay.addEventListener('click', closeMenu);
-
-    // Close menu when clicking on links
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    // Close menu on escape key
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-            closeMenu();
-        }
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu();
     });
 
-    // Form Switching Logic
+    // Form Switching
     const loginForm = document.getElementById('loginForm');
     const createAccountForm = document.getElementById('createAccountForm');
     const showCreateAccount = document.getElementById('showCreateAccount');
-    const showLogin = document.getElementById('showLogin');
     const showLoginFromCreate = document.getElementById('showLoginFromCreate');
 
     function showForm(formToShow, formToHide) {
@@ -731,19 +733,8 @@
         showCreateAccount.addEventListener('click', (e) => {
             e.preventDefault();
             showForm(createAccountForm, loginForm);
-            // Update URL without reload
             history.pushState({}, '', '/login?create=account');
             document.title = 'Create Account | NaijaAssets';
-        });
-    }
-
-    if (showLogin) {
-        showLogin.addEventListener('click', (e) => {
-            e.preventDefault();
-            showForm(loginForm, createAccountForm);
-            // Update URL without reload
-            history.pushState({}, '', '/login');
-            document.title = 'Login | NaijaAssets';
         });
     }
 
@@ -751,13 +742,11 @@
         showLoginFromCreate.addEventListener('click', (e) => {
             e.preventDefault();
             showForm(loginForm, createAccountForm);
-            // Update URL without reload
             history.pushState({}, '', '/login');
             document.title = 'Login | NaijaAssets';
         });
     }
 
-    // Check URL parameter on page load
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('create') === 'account') {
@@ -766,7 +755,7 @@
         }
     });
 
-    // Toggle password visibility - Login
+    // Password Toggles
     const toggleBtn = document.getElementById('togglePassword');
     const passInput = document.getElementById('password');
     if(toggleBtn && passInput) {
@@ -777,7 +766,6 @@
         });
     }
 
-    // Toggle password visibility - Create Account
     const toggleCreateBtn = document.getElementById('toggleCreatePassword');
     const createPassInput = document.getElementById('createPassword');
     if(toggleCreateBtn && createPassInput) {
@@ -788,7 +776,6 @@
         });
     }
 
-    // Toggle password visibility - Confirm Password
     const toggleConfirmBtn = document.getElementById('toggleConfirmPassword');
     const confirmPassInput = document.getElementById('confirmPassword');
     if(toggleConfirmBtn && confirmPassInput) {
@@ -799,21 +786,6 @@
         });
     }
 
-    // Micro-interaction for input fields
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('focus', () => {
-            if(input.parentElement) {
-                input.parentElement.classList.add('scale-[1.01]');
-            }
-        });
-        input.addEventListener('blur', () => {
-            if(input.parentElement) {
-                input.parentElement.classList.remove('scale-[1.01]');
-            }
-        });
-    });
-
-    // Handle browser back/forward buttons
     window.addEventListener('popstate', () => {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('create') === 'account') {
